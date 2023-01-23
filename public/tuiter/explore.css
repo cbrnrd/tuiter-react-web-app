@@ -4,7 +4,7 @@ body {
     padding-left: 16px;
     padding-right: 16px;
     background-color: black;
-    font-family: monospace;
+    font-family: sans-serif;
 }
 
 .wd-search {
@@ -14,18 +14,35 @@ body {
     padding: 5px;
     margin: 5px;
     color: white;
-    width: 85%;
+    width: 90%;
     /* Rounded corners */
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    text-indent: 10px;
+}
+
+.wd-search:focus {
+    outline: none;
+    border-color:rgb(29, 161, 242);
+    border-width: 1px;
+}
+
+.wd-search-box {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+}
+
+.wd-gear-icon {
+    /* Should always be on the right, 16px away from the right edge */
+    float: right;
 }
 
 .wd-links {
-    
-    border-radius: 5px;
-    border-bottom: rgb(47, 51, 54) 1px solid;
+
 
     /* All elements should be on the same line*/
     display: inline-block;
@@ -40,30 +57,66 @@ body {
 .wd-link {
     /* All elements should have text color 110, 118, 125 */
     color: rgb(110, 118, 125);
+    text-decoration: none;
+    position: relative;
+    margin: 2rem;
 }
 
 .wd-link:focus {
     color: rgb(29, 161, 242);
 }
 
+.wd-link:after {
+    content: '';
+
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+
+    border-width: 0 0 3px;
+    border-style: solid;
+}
+
 /* Below the links there are suggested posts. The suggested posts have the topic, title and number of tuits. The topic, "Trending in Science", "Sports Tranding", "Trending in United States", have 13px font and color 110, 118, 125 */
 .wd-suggested-posts {
     border: rgb(47, 51, 54) 1px solid;
-    margin: 16px;
     font-size: 13px;
     color: rgb(110, 118, 125);
+    width: 100%;
     
+    /* Each element should have a top and bottom border of 1px grey solid */
+    border-bottom: rgb(47, 51, 54) 1px solid;
+    border-top: rgb(47, 51, 54) 1px solid;
+    border-radius: 10px;
 }
 
 .wd-suggested-post {
     /* All elements should be stacked*/
+    display: flex;
+    /* All elements should be 16 px away from each other */
+    /* All elements should have text weight 13px */
+    font-size: 13px;
+    /* All elements should have text color 110, 118, 125 */
+    color: rgb(110, 118, 125);
+    border-top: rgb(47, 51, 54) 1px solid;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.wd-suggested-post-text-content {
+    /* All elements should be stacked*/
     display: block;
+    float: left;
     /* All elements should be 16 px away from each other */
     margin: 16px;
     /* All elements should have text weight 13px */
     font-size: 13px;
     /* All elements should have text color 110, 118, 125 */
     color: rgb(110, 118, 125);
+    width: 80%;
 }
 
 .wd-suggested-post-topic {
@@ -87,6 +140,15 @@ body {
     color: rgb(110, 118, 125);
 }
 
+.wd-suggested-post-author {
+    color: white;
+}
+
+.wd-img-container {
+    width: 80%;
+    float: right;
+}
+
 .wd-suggested-post-image {
     /* Should always be on the right, 16px away from the right edge */
     float: right;
@@ -97,7 +159,6 @@ body {
     border-radius: 15px;
 }
 
-.wd-image-inline {
-    /* Should always be on the right, 16px away from the right edge */
-    display: inline-block;
+.wd-suggested-link {
+    text-decoration: none;
 }
