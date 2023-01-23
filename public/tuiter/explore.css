@@ -1,0 +1,103 @@
+/* Have all items 16 px away from the left edge */
+
+body {
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: black;
+    font-family: monospace;
+}
+
+.wd-search {
+    background-color: #252525;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    width: 85%;
+    /* Rounded corners */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.wd-links {
+    
+    border-radius: 5px;
+    border-bottom: rgb(47, 51, 54) 1px solid;
+
+    /* All elements should be on the same line*/
+    display: inline-block;
+    /* All elements should be 16 px away from each other */
+    margin: 16px;
+    /* All elements should have text weight 15px */
+    font-size: 15px;
+    /* All elements should have text color 110, 118, 125 */
+    color: rgb(110, 118, 125);
+}
+
+.wd-link {
+    /* All elements should have text color 110, 118, 125 */
+    color: rgb(110, 118, 125);
+}
+
+.wd-link:focus {
+    color: rgb(29, 161, 242);
+}
+
+/* Below the links there are suggested posts. The suggested posts have the topic, title and number of tuits. The topic, "Trending in Science", "Sports Tranding", "Trending in United States", have 13px font and color 110, 118, 125 */
+.wd-suggested-posts {
+    border: rgb(47, 51, 54) 1px solid;
+    margin: 16px;
+    font-size: 13px;
+    color: rgb(110, 118, 125);
+    
+}
+
+.wd-suggested-post {
+    /* All elements should be stacked*/
+    display: block;
+    /* All elements should be 16 px away from each other */
+    margin: 16px;
+    /* All elements should have text weight 13px */
+    font-size: 13px;
+    /* All elements should have text color 110, 118, 125 */
+    color: rgb(110, 118, 125);
+}
+
+.wd-suggested-post-topic {
+    /* All elements should have text weight 11px */
+    font-size: 11px;
+    /* All elements should have text color 110, 118, 125 */
+    color: rgb(110, 118, 125);
+}
+
+.wd-suggested-post-title {
+    /* All elements should have text weight 13px */
+    font-size: 13px;
+    /* All elements should have text color white */
+    color: white;
+}
+
+.wd-suggested-post-tuits {
+    /* All elements should have text weight 11px */
+    font-size: 11px;
+    /* All elements should have text color 110, 118, 125 */
+    color: rgb(110, 118, 125);
+}
+
+.wd-suggested-post-image {
+    /* Should always be on the right, 16px away from the right edge */
+    float: right;
+    margin-right: 16px;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.wd-image-inline {
+    /* Should always be on the right, 16px away from the right edge */
+    display: inline-block;
+}
