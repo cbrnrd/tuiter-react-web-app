@@ -1,0 +1,88 @@
+body {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: black;
+  font-family: sans-serif;
+  color: white;
+}
+
+.wd-bookmark-header-area {
+  margin-top: 12px;
+  padding: 12px 16px;
+  display: block;
+  border-top: rgb(110, 118, 125) 1px solid;
+  border-right: rgb(110, 118, 125) 1px solid;
+  border-left: rgb(110, 118, 125) 1px solid;
+}
+
+.wd-bookmark-header-title {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.wd-bookmark-header-subtitle {
+  font-size: 12px;
+  color: rgb(110, 118, 125);
+}
+
+.wd-tuit-parent {
+  padding: 12px 16px;
+  display: flex;
+  border: rgb(110, 118, 125) 1px solid;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.wd-tuit-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.wd-tuit-content {
+  display: block;
+  max-width: 506px;
+}
+
+.wd-tuit-author {
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+
+.wd-tuit-username {
+  font-size: 12px;
+  color: rgb(110, 118, 125);
+}
+
+.wd-tuit-date {
+  font-size: 12px;
+  color: rgb(110, 118, 125);
+}
+
+.wd-tuit-text-content {
+  font-size: 15px;
+  color: white;
+  max-width: 506px;
+  margin: 12px 0px;
+}
+
+.wd-image-with-description {
+  display: block;
+  margin-top: 12px;
+  border:rgb(110, 118, 125) 1px solid;
+  border-radius: 10px;
+}
+
+.wd-tuit-image {
+  width: 504px;
+  height: 264px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.wd-image-description {
+  display: block;
+}
+
