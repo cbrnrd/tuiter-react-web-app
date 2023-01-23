@@ -4,6 +4,13 @@ body {
   background-color: black;
   font-family: sans-serif;
   color: white;
+  width: fit-content;
+}
+
+.wd-bookmark-header-and-ellipsis-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .wd-bookmark-header-area {
@@ -27,11 +34,17 @@ body {
   color: rgb(110, 118, 125);
 }
 
-.wd-tuit-parent {
-  padding: 12px 16px;
-  display: flex;
+.wd-tuits-parent-container {
+  width: fit-content;
+  display: block;
   border: rgb(110, 118, 125) 1px solid;
   border-radius: 0px 0px 10px 10px;
+}
+
+.wd-tuit {
+  padding: 12px 16px;
+  display: flex;
+  border-top: rgb(110, 118, 125) 1px solid;
 }
 
 .wd-tuit-avatar {
@@ -84,5 +97,51 @@ body {
 
 .wd-image-description {
   display: block;
+  padding: 12px;
+  font-size: 15px;
 }
 
+.wd-image-description-title {
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+}
+
+.wd-image-description-subtitle {
+  font-size: 12px;
+  color: rgb(110, 118, 125);
+  padding-top: 2px;
+}
+
+.wd-link-no-underline {
+  text-decoration: none;
+}
+
+.wd-tuit-icons-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  width: 70%;
+}
+
+.wd-tuit-icons-bar-number {
+  font-size: 12px;
+  color: rgb(110, 118, 125);
+  padding-left: 12px;
+}
+
+.wd-fill-red {
+  color: rgb(224, 36, 94);
+}
+
+.wd-fill-grey {
+  color: rgb(110, 118, 125);
+}
+
+.wd-fill-blue {
+  color: rgb(29, 161, 242);
+}
+
+.wd-float-right {
+  float: right;
+}
