@@ -9,38 +9,55 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
     <link href="index.css" rel="stylesheet" />
     <title>Explore</title>
+    <div class="d-block d-sm-none fa-2x">XS</div>
+    <div class="d-none d-sm-block d-md-none fa-2x">S</div>
+    <div class="d-none d-md-block d-lg-none fa-2x">M</div>
+    <div class="d-none d-lg-block d-xl-none fa-2x">L</div>
+    <div class="d-none d-xl-block d-xxl-none fa-2x">XL</div>
+    <div class="d-none d-xxl-block fa-2x">XXL</div>
 </head>
 
 <body>
-    <div class="row m-3">
-        <div class="col-2 d-grid gap-2">
+    <div class="row m-5 px-5">
+        <div class="col-1 d-grid">
             <ul class="list-group">
-                <li class="list-group-item"><i class="fas fa-home p-2"></i>Home</li>
-                <li class="list-group-item active"><i class="fas fa-hashtag p-2"></i>Explore</li>
-                <li class="list-group-item"><i class="fas fa-bell p-2"></i>Notifications</li>
-                <li class="list-group-item"><i class="fas fa-envelope p-2"></i>Messages</li>
-                <li class="list-group-item"><i class="fas fa-bookmark p-2"></i>Bookmarks</li>
-                <li class="list-group-item"><i class="fas fa-list p-2"></i>Lists</li>
-                <li class="list-group-item"><i class="fas fa-user p-2"></i>Profile</li>
-                <li class="list-group-item"><i class="fas fa-ellipsis-h p-2"></i>More
+                <!-- Hide text on large and below-->
+                <li class="list-group-item"><i class="fas fa-home p-2"></i><span class="d-none d-lg-inline">Home</span>
+                <li class="list-group-item active"><i class="fas fa-hashtag p-2"></i><span
+                        class="d-none d-lg-inline">Explore</span></li>
+                <li class="list-group-item"><i class="fas fa-bell p-2"></i><span
+                        class="d-none d-lg-inline">Notifications</span></li>
+                <li class="list-group-item"><i class="fas fa-envelope p-2"></i><span class="d-none d-lg-inline">Messages</span>
                 </li>
+                <li class="list-group-item"><i class="fas fa-bookmark p-2"></i><span
+                        class="d-none d-lg-inline">Bookmarks</span></li>
+                <li class="list-group-item"><i class="fas fa-list p-2"></i><span class="d-none d-lg-inline">Lists</span></li>
+                <li class="list-group-item"><i class="fas fa-user p-2"></i><span class="d-none d-lg-inline">Profile</span></li>
+                <li class="list-group-item"><i class="fas fa-ellipsis-h p-2"></i><span class="d-none d-lg-inline">More</span>
+                </li>
+                <button type="button" class="btn btn-outline-primary btn-block mt-3 rounded">Tweet</button>
             </ul>
 
-            <button type="button" class="btn btn-outline-primary btn-block mt-3 rounded">Tweet</button>
         </div>
-        <div class="col-8 d-block m-3">
+        <div class="col-6 d-block m-3">
             <!--- search bar -->
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
-                <input type="text" class="form-control rounded" placeholder="Search Twitter" aria-label="Search Twitter"
-                    aria-describedby="basic-addon2">
-                    <i class="fas fa-cog fa-2x text-primary ms-1"></i>
+            <div class="input-group position-relative mb-2">
+                <!-- <span class="input-group-text bg-transparent border-end-0"><i class="fas fa-search"></i></span> -->
+                <input type="text" class="form-control rounded-pill ps-5 bg-transparent me-5"
+                    placeholder="Search Twitter">
+                <div class="position-absolute top-50 start-0 translate-middle-y ps-3"><i class="fas fa-search"></i>
+                </div>
+                <div class="position-absolute top-50 end-0 translate-middle"><i
+                        class="fas fa-cog fa-2x text-primary"></i>
+                </div>
+
             </div>
 
-            <div class="row">
+
+            <div class="row mb-3">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">For you</a>
+                        <a class="nav-link active " href="#">For you</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Trending</a>
@@ -56,10 +73,193 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Tweet content -->
+            <!-- Image the size of the parent div -->
+            <div class="row">
+                <div class="position-relative p-0">
+                    <img src="https://techcrunch.com/wp-content/uploads/2019/09/Starship-Mk1-Day.jpg" class="img-fluid">
+                    <h1 class="position-absolute bottom-0 start-0 text-white fs-1 p-3">
+                        <b>SpaceX's Starship</b>
+                    </h1>
+                </div>
+
+                <div class="card mb-0 rounded-0">
+                    <div class="row g-0 justify-content-between">
+                        <div class="col-8">
+                            <div class="card-body w-auto">
+                                <small class="card-text text-muted mb-0">Web Development</small>
+                                <h5 class="card-title">ReactJS <i
+                                        class="fas text-black fa-check-circle text-primary"></i> <small
+                                        class="text-muted"> - 2h</small></h5>
+                                <p class="card-text">React.js is a component based front end library that makes it very
+                                    easy to build Single Page Applications or SPAs.</p>
+                            </div>
+                        </div>
+                        <div class="col-8 w-auto position-relative">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmOn8uzQfASPxRaCRjXKisVpoUd3bZzAz_dw&usqp=CAU"
+                                class="position-absolute top-50 end-0 translate-middle-y" width="100px" height="100px"
+                                alt="...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card my-0 rounded-0 py-3">
+                    <div class="row g-0 justify-content-between">
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">JavaScript <i
+                                        class="fas text-black fa-check-circle text-primary"></i> <small
+                                        class="text-muted"> - 2h</small></h5>
+                                <p class="card-text">JavaScript is a programming language that can run on browsers as
+                                    well as desktops</p>
+                                <small class="text-muted">123K Tweets</small>
+                            </div>
+                        </div>
+                        <div class="col-8 w-auto position-relative">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                                class="position-absolute top-50 end-0 translate-middle-y" width="100px" height="100px"
+                                alt="...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card my-0 rounded-0 py-3">
+                    <div class="row g-0 justify-content-between">
+                        <div class="col-8">
+                            <div class="card-body">
+                                <small class="text-muted">Web Development</small>
+                                <h5 class="card-title">jQuery</h5>
+                                <small class="text-muted">123K Tweets</small>
+                            </div>
+                        </div>
+                        <div class="col-8 w-auto position-relative">
+                            <img src="https://w7.pngwing.com/pngs/720/46/png-transparent-jquery-plain-wordmark-logo-icon-thumbnail.png"
+                                class="position-absolute top-50 end-0 translate-middle-y" width="100px" height="100px"
+                                alt="...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card my-0 rounded-0 py-3">
+                    <div class="row g-0 justify-content-between">
+                        <div class="col-4">
+                            <div class="card-body">
+                                <small class="text-muted">Web Development</small>
+                                <h5 class="card-title">NodeJS <i
+                                        class="fas text-black fa-check-circle text-primary"></i> <small
+                                        class="text-muted"> - 2h</small></h5>
+                                <small class="text-muted">123K Tweets</small>
+                            </div>
+                        </div>
+                        <div class="col-4 w-auto position-relative">
+                            <img src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
+                                class="position-absolute top-50 end-0 translate-middle-y" width="100px" height="100px"
+                                alt="...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Have a div that has a right column and left column, with content on each horizontal end -->
+
+                <!-- <div class="d-flex border p-3">
+                    <div class="me-auto h-25">
+                        <small class="text-muted">Web Development</small>
+                        <h5 class="card-title">NodeJS <i class="fas text-black fa-check-circle text-primary"></i> <small
+                                class="text-muted"> - 2h</small></h5>
+                        <small class="text-muted">123K Tweets</small>
+                    </div>
+                    <div class="ms-auto flex-shrink-0 bd-highlight p-2 h-auto w-25">
+                        <img src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
+                            class="ms-auto h-25 img-fluid float-end flex-shrink-0 align-middle" height="25%" alt="...">
+                    </div>
+                </div> -->
+
+            </div>
         </div>
         <!-- Only visible on L, XL, XXL-->
         <div class="col d-none d-lg-block m-3">
-            <h3>Sidebar</h3>
+
+            <ul class="list-group">
+                <li class="list-group-item">Who to follow</li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                        <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Emblem.jpg"
+                            class="rounded-circle" width="50px" height="50px" alt="...">
+                        <div class="d-flex flex-column ms-3">
+                            <small><b>Java</b> <i class="fas text-black fa-check-circle text-primary"></i></small>
+                            <small class="text-muted">@Java</small>
+
+                        </div>
+                        <div class="ms-auto d-flex align-items-center">
+                            <button type="button"
+                                class="btn btn-primary btn-sm rounded-pill px-3 align-items-center">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                        <img src="https://res.cloudinary.com/crunchbase-production/image/upload/j3dbh6kok0dket3uz2vy"
+                            class="rounded-circle" width="50px" height="50px" alt="...">
+                        <div class="d-flex flex-column ms-3">
+                            <small><b>Relativity Space</b> <i
+                                    class="fas text-black fa-check-circle text-primary"></i></small>
+                            <small class="text-muted">@relativityspace</small>
+
+                        </div>
+                        <div class="ms-auto d-flex align-items-center">
+                            <button type="button"
+                                class="btn btn-primary btn-sm rounded-pill px-3 align-items-center">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                        <img src="https://www.c-r-y.org.uk/wp-content/uploads/2016/10/Virgin-logo.png"
+                            class="rounded-circle" width="50px" height="50px" alt="...">
+                        <div class="d-flex flex-column ms-3">
+                            <small><b>Virgin Galactic</b> <i
+                                    class="fas text-black fa-check-circle text-primary"></i></small>
+                            <small class="text-muted">@virgingalactic</small>
+
+                        </div>
+                        <div class="ms-auto d-flex align-items-center">
+                            <button type="button"
+                                class="btn btn-primary btn-sm rounded-pill px-3 align-items-center">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png"
+                            class="rounded-circle" width="50px" height="50px" alt="...">
+                        <div class="d-flex flex-column ms-3">
+                            <small><b>NASA</b> <i class="fas text-black fa-check-circle text-primary"></i></small>
+                            <small class="text-muted">@NASA</small>
+
+                        </div>
+                        <div class="ms-auto d-flex align-items-center">
+                            <button type="button"
+                                class="btn btn-primary btn-sm rounded-pill px-3 align-items-center">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                        <img src="https://www.logodesignlove.com/images/monograms/tesla-symbol.jpg"
+                            class="rounded-circle" width="50px" height="50px" alt="...">
+                        <div class="d-flex flex-column ms-3">
+                            <small><b>Tesla</b> <i class="fas text-black fa-check-circle text-primary"></i></small>
+                            <small class="text-muted">@Tesla</small>
+
+                        </div>
+                        <div class="ms-auto d-flex align-items-center">
+                            <button type="button"
+                                class="btn btn-primary btn-sm rounded-pill px-3 align-items-center">Follow</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </body>
