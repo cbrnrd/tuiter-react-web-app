@@ -18,7 +18,7 @@ function PostSummaryItem(post) {
              <h6 class="card-title">${post.userName}
              <i class="fas text-black fa-check-circle text-primary"></i> <small
                      class="text-muted h6"> - ${post.time}</small></h6>
-             <p class="card-text h5">${post.title}</p>
+             <p class="card-text h6">${post.title}</p>
          </div>
      </div>
      <div class="col-8 w-auto position-relative">
@@ -39,6 +39,6 @@ var p = {
   title: "React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs",
 }
 
-$(() => $('#wd-post-summary').append(PostSummaryItem(p)));
+//$(() => $('#wd-post-summary').append(PostSummaryItem(p)));
 
 export default PostSummaryItem;
