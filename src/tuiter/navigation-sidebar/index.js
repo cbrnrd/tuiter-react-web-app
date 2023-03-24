@@ -1,57 +1,28 @@
 import React from "react";
+import {useLocation} from "react-router";
+import NavItem from "./nav-item";
+import sidebars from "./tabs.json";
+import {Link} from "react-router-dom";
 
-const NavigationSidebar = (
-  {
-    active = 'explore'
-  }
-) => {
-  return (
-    <div className="list-group">
-      <a className="list-group-item">
-        <span
-          className="d-none d-xl-inline">Tuiter</span></a>
-      <a className={`list-group-item
-                    ${active === 'home' ? 'active' : ''}`}>
-        <i className="bi-house-fill"></i><span
-          className="d-none d-xl-inline"> Home </span>
-      </a>
-      <a className={`list-group-item
-                    ${active === 'explore' ? 'active' : ''}`}>
-        <i className="bi-hash"></i><span
-          className="d-none d-xl-inline"> Explore</span>
-      </a>
-      <a className={`list-group-item
-                    ${active === 'notifications' ? 'active' : ''}`}>
-        <i className="bi-bell-fill"></i><span
-          className="d-none d-xl-inline"> Notifications</span>
-      </a>
-      <a className={`list-group-item
-                    ${active === 'messages' ? 'active' : ''}`}>
-        <i className="bi-envelope-fill"></i><span
-          className="d-none d-xl-inline"> Messages</span>
-      </a>
-      <a className={`list-group-item
-                    ${active === 'bookmarks' ? 'active' : ''}`}>
-        <i className="bi-bookmark-fill"></i><span
-          className="d-none d-xl-inline"> Bookmarks</span>
-      </a>
-      <a className={`list-group-item
-                    ${active === 'lists' ? 'active' : ''}`}>
-        <i className="bi-list-task"></i><span
-          className="d-none d-xl-inline"> Lists</span>
-      </a>
-      <a className={`list-group-item
-                    ${active === 'profile' ? 'active' : ''}`}>
-        <i className="bi-person-fill"></i><span
-          className="d-none d-xl-inline"> Profile</span>
-      </a>
-      <a className={`list-group-item
-                    ${active === 'more' ? 'active' : ''}`}>
-        <i className="bi-three-dots"></i><span
-          className="d-none d-xl-inline"> More</span>
-      </a>
-    </div>
-  );
-};
+const NavigationSidebar = () => {
+    const {pathname} = useLocation();
+    const paths = pathname.split('/')
+    const active = paths[2];
+    return(
+        <div className="list-group sticky-top">
+            <Link to="/" className="list-group-item">Labs</Link>
+            {
+                sidebars.map(sidebar => {
+                return(
+                    // If the path is /tuiter, then active home link
+                    <NavItem key={sidebar._id} sidebar={sidebar} active={active ? active : "explore"}/>)
+                })
+            }
+            <div className="d-grid mt-2">
+                <button className="btn btn-primary btn-block rounded-pill">Tuit</button>
+            </div>
+        </div>
+    );
+}
+
 export default NavigationSidebar;
-

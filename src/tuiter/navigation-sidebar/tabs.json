@@ -1,0 +1,48 @@
+[
+    {
+        "_id": 123,
+        "source": "/",
+        "iconMain": "bi-twitter",
+        "name": ""
+    },
+    {
+        "_id": 234,
+        "iconMain": "bi-house-fill",
+        "name": "home"
+    },
+    {
+        "_id": 345,
+        "iconMain": "bi-hash",
+        "name": "explore"
+    },
+    {
+        "_id": 456,
+        "iconMain": "bi-bell-fill",
+        "name": "notifications"
+    },
+    {
+        "_id": 567,
+        "iconMain": "bi-envelope-fill",
+        "name": "messages"
+    },
+    {
+        "_id": 678,
+        "iconMain": "bi-bookmark-fill",
+        "name": "bookmarks"
+    },
+    {
+        "_id": 789,
+        "iconMain": "bi-list-task",
+        "name": "lists"
+    },
+    {
+        "_id": 890,
+        "iconMain": "bi-person-fill",
+        "name": "profile"
+    },
+    {
+        "_id": 901,
+        "iconMain": "bi-three-dots",
+        "name": "more"
+    }
+]
