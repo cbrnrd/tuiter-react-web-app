@@ -15,7 +15,7 @@ const NavigationSidebar = () => {
                 sidebars.map(sidebar => {
                 return(
                     // If the path is /tuiter, then active home link
-                    <NavItem key={sidebar._id} sidebar={sidebar} active={active ? active : "explore"}/>)
+                    <NavItem key={sidebar._id} sidebar={sidebar} active={active ? active : "home"}/>)
                 })
             }
             <div className="d-grid mt-2">

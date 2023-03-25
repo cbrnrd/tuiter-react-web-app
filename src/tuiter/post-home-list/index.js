@@ -1,4 +1,4 @@
-import PostHomeListItem from "./post-home-list-item";
+import PostHomeListItem from "../tuits/post-summary-item";
 import posts from './posts.json'
 
 const PostHomeList = () => {
