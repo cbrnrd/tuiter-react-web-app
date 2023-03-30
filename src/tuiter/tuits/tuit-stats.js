@@ -1,5 +1,9 @@
-const TuitStats = ({tuit}) => {
-    
+import { useDispatch } from "react-redux";
+import { updateTuitThunk } from "../../services/tuits-thunks";
+
+const TuitStats = ({ tuit }) => {
+
+    const dispatch = useDispatch();
 
     return (
         <>
@@ -13,8 +17,12 @@ const TuitStats = ({tuit}) => {
                     <span>{tuit.retuits}</span>
                 </a>
                 <a className="col text-secondary text-decoration-none">
-                    {tuit.liked && <i className="bi bi-heart-fill text-danger pe-2"></i>}
-                    {!tuit.liked && <i className="bi bi-heart pe-2"></i>}
+                    {tuit.liked && <i className="bi bi-heart-fill text-danger pe-2"
+                        onClick={() => { dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes - 1 })) }}
+                    ></i>}
+                    {!tuit.liked && <i className="bi bi-heart pe-2"
+                        onClick={() => { dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1 })) }}
+                    ></i>}
                     <span>{tuit.likes}</span>
                 </a>
                 <a href="/#" className="col text-secondary text-decoration-none">
