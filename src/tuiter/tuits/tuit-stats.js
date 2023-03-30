@@ -18,10 +18,10 @@ const TuitStats = ({ tuit }) => {
                 </a>
                 <a className="col text-secondary text-decoration-none">
                     {tuit.liked && <i className="bi bi-heart-fill text-danger pe-2"
-                        onClick={() => { dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes - 1 })) }}
+                        onClick={() => { dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes - 1, liked: false })) }}
                     ></i>}
                     {!tuit.liked && <i className="bi bi-heart pe-2"
-                        onClick={() => { dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1 })) }}
+                        onClick={() => { dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1, liked: true })) }}
                     ></i>}
                     <span>{tuit.likes}</span>
                 </a>
